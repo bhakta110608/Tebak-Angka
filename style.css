@@ -1,0 +1,243 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* BODY */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to top right, #fff1e0, #ffe0b3);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* CONTAINER UTAMA */
+.container {
+  background: #fffdfa;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 420px;
+  width: 100%;
+  padding: 30px 25px;
+  text-align: center;
+  animation: popIn 0.6s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+/* JUDUL */
+h1 {
+  color: #d35400;
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px #fff;
+}
+
+/* PARAGRAF */
+.container p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* GAMBAR KOPI */
+.kopi-hero {
+  width: 100px;
+  margin-bottom: 10px;
+}
+
+/* INPUT ANGKA */
+input[type="number"] {
+  width: 100%;
+  padding: 12px 18px;
+  font-size: 18px;
+  border: 2px solid #ffa94d;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+}
+
+input[type="number"]:focus {
+  outline: none;
+  border-color: #ff6b00;
+  box-shadow: 0 0 5px #ffc99e;
+}
+
+/* TOMBOL UTAMA */
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  background: #ff6b00;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+button:hover {
+  background-color: #e65c00;
+  transform: scale(1.05);
+}
+
+/* TOMBOL RESET */
+#resetBtn {
+  margin-top: 15px;
+  background: #27ae60;
+}
+
+#resetBtn:hover {
+  background: #219150;
+}
+
+/* PESAN & PERCOBAAN */
+#message {
+  font-size: 18px;
+  margin-top: 20px;
+  min-height: 24px;
+  font-weight: bold;
+  transition: 0.3s ease;
+}
+
+#attempts {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #777;
+}
+
+/* PROGRESS BAR */
+.progress-bar {
+  height: 12px;
+  width: 100%;
+  background-color: #ffe0b3;
+  border-radius: 10px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: 0%;
+  background-color: #ff6600;
+  transition: width 0.3s ease;
+  border-radius: 10px;
+}
+
+/* ANIMASI MASUK */
+@keyframes popIn {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ANIMASI SAAT MENANG / KALAH */
+body.win {
+  animation: winFlash 0.5s ease forwards;
+}
+
+body.lose {
+  animation: loseFlash 0.5s ease forwards;
+}
+
+@keyframes winFlash {
+  0% { background-color: #fff; }
+  50% { background-color: #c8f7c5; }
+  100% { background-color: #fff; }
+}
+
+@keyframes loseFlash {
+  0% { background-color: #fff; }
+  50% { background-color: #fdd; }
+  100% { background-color: #fff; }
+}
+
+/* FOOTER & LEADERBOARD */
+.footer {
+  margin-top: 30px;
+  text-align: center;
+  font-size: 13px;
+  color: #888;
+}
+
+.footer button {
+  margin-top: 10px;
+  font-size: 12px;
+  padding: 6px 14px;
+  background-color: #999;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer button:hover {
+  background-color: #777;
+}
+
+.footer ol {
+  padding-left: 20px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.footer h4 {
+  margin-bottom: 5px;
+  color: #333;
+}
+
+
+/* RESPONSIF UNTUK LAYAR KECIL */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  input[type="number"],
+  button {
+    font-size: 16px;
+  }
+}
+.footer {
+  margin-top: 25px;
+  text-align: center;
+  font-size: 13px;
+  color: #555;
+}
+
+.footer button {
+  margin-top: 8px;
+  font-size: 13px;
+  padding: 8px 16px;
+  background-color: #ff6b00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.footer button:hover {
+  background-color: #e65c00;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tebak Angka, Dapet Kopi!</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  
+</head>
+<body>
+
+  <main class="container">
+    <!-- Ilustrasi Kopi -->
+    <img src="kopi-lucu.png" alt="Kopi Lucu" class="kopi-hero" />
+
+    <!-- Judul & Deskripsi -->
+    <h1>Tebak Angka, Dapet Kopi! ☕</h1>
+    <p>Komputer sudah memilih angka 1–30. Tebak dan menangkan kopimu!</p>
+
+    <!-- Input & Tombol Tebak -->
+    <input
+      type="number"
+      id="guessInput"
+      placeholder="Masukkan angka 1–30"
+      min="1"
+      max="30"
+    />
+    <button onclick="checkGuess()">Tebak</button>
+
+    <!-- Feedback -->
+    <p id="message"></p>
+    <p id="attempts"></p>
+
+    <!-- Tombol Reset Game -->
+    <button id="resetBtn" onclick="resetGame()" style="display: none;">Main Lagi</button>
+
+    <!-- Progress Bar -->
+    <div class="progress-bar">
+      <div id="progress" class="progress-fill"></div>
+    </div>
+
+   <!-- Leaderboard & Reset Skor -->
+<div class="footer">
+  <div id="leaderboard">Belum ada skor terbaik</div>
+  <button onclick="resetLeaderboard()">Reset Skor Terbaik</button>
+</div>
+
+
+  <!-- Script JS -->
+  <script src="script.js"></script>
+  <!-- Library Confetti -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+</body>
+</html>
